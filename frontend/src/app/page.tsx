@@ -1,5 +1,5 @@
 import NavBar from "@/components/NavBar"
-// import SectionEvents
+import SectionEvents from "@/components/sections/Events"
 // import SectionAbout
 // import SectionTips&Advices
 // import SectionGallery
@@ -12,6 +12,7 @@ export default function HomePage() {
       {/* Section Accueil */}
       <NavBar />
       {/* Section Events */}
+      <SectionEvents />
     </main>
   );
 }
