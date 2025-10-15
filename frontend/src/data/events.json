@@ -1,0 +1,38 @@
+[
+  {
+    "id": "event-001",
+    "title": "L'économie solidaire locale",
+    "genre": "Repas Débat",
+    "cover": "https://plus.unsplash.com/premium_photo-1661777702966-aed29ab4106b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "date": "2025-11-15",
+    "time": "19:00 - 22:00",
+    "location": {
+      "name": "Salle Polyvalente des Tilleuls",
+      "city": "Montpellier",
+      "address": "12 Rue des Tilleuls, 34000 Montpellier"
+    },
+    "organizer": "Synergie Positive",
+    "description": "Une soirée conviviale pour échanger sur les initiatives locales en matière d’économie solidaire, autour d’un repas partagé.",
+    "tags": ["Rencontre", "Développement local", "Économie sociale"],
+    "price": "Gratuit",
+    "participants_limit": 50
+  },
+    {
+    "id": "event-002",
+    "title": "L'économie solidaire locale",
+    "genre": "Repas Débat",
+    "cover": "https://plus.unsplash.com/premium_photo-1661777702966-aed29ab4106b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "date": "2025-11-15",
+    "time": "19:00 - 22:00",
+    "location": {
+      "name": "Salle Polyvalente des Tilleuls",
+      "city": "Montpellier",
+      "address": "12 Rue des Tilleuls, 34000 Montpellier"
+    },
+    "organizer": "Synergie Positive",
+    "description": "Une soirée conviviale pour échanger sur les initiatives locales en matière d’économie solidaire, autour d’un repas partagé.",
+    "tags": ["Rencontre", "Développement local", "Économie sociale"],
+    "price": "Gratuit",
+    "participants_limit": 50
+  }
+]
