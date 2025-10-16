@@ -3,7 +3,7 @@
     "id": "event-001",
     "title": "L'économie solidaire locale",
     "genre": "Repas Débat",
-    "cover": "https://plus.unsplash.com/premium_photo-1661777702966-aed29ab4106b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "cover": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
     "date": "2025-11-15",
     "time": "19:00 - 22:00",
     "location": {
@@ -12,27 +12,99 @@
       "address": "12 Rue des Tilleuls, 34000 Montpellier"
     },
     "organizer": "Synergie Positive",
-    "description": "Une soirée conviviale pour échanger sur les initiatives locales en matière d’économie solidaire, autour d’un repas partagé.",
+    "description": "Une soirée conviviale pour échanger sur les initiatives locales en matière d'économie solidaire, autour d'un repas partagé.",
     "tags": ["Rencontre", "Développement local", "Économie sociale"],
     "price": "Gratuit",
     "participants_limit": 50
   },
-    {
+  {
     "id": "event-002",
-    "title": "L'économie solidaire locale",
-    "genre": "Repas Débat",
-    "cover": "https://plus.unsplash.com/premium_photo-1661777702966-aed29ab4106b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    "date": "2025-11-15",
-    "time": "19:00 - 22:00",
+    "title": "Atelier Zéro Déchet",
+    "genre": "Atelier",
+    "cover": "https://images.unsplash.com/photo-1559027615-cd2628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
+    "date": "2025-11-22",
+    "time": "14:00 - 16:30",
     "location": {
-      "name": "Salle Polyvalente des Tilleuls",
+      "name": "Centre Écologique Local",
       "city": "Montpellier",
-      "address": "12 Rue des Tilleuls, 34000 Montpellier"
+      "address": "45 Avenue de la Paix, 34000 Montpellier"
     },
-    "organizer": "Synergie Positive",
-    "description": "Une soirée conviviale pour échanger sur les initiatives locales en matière d’économie solidaire, autour d’un repas partagé.",
-    "tags": ["Rencontre", "Développement local", "Économie sociale"],
+    "organizer": "Terre Verte",
+    "description": "Découvrez comment réduire vos déchets au quotidien. Conseils pratiques et astuces de zéro déchet.",
+    "tags": ["Environnement", "Durabilité", "Pratique"],
+    "price": "12€",
+    "participants_limit": 30
+  },
+  {
+    "id": "event-003",
+    "title": "Conférence : Les Énergies Renouvelables",
+    "genre": "Conférence",
+    "cover": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
+    "date": "2025-11-29",
+    "time": "20:00 - 21:30",
+    "location": {
+      "name": "Théâtre Kébéla",
+      "city": "Montpellier",
+      "address": "8 Boulevard Ledru-Rollin, 34000 Montpellier"
+    },
+    "organizer": "Collectif Énergie Durable",
+    "description": "Explorez les dernières innovations en matière d'énergies renouvelables avec nos experts.",
+    "tags": ["Énergie", "Innovation", "Environnement"],
     "price": "Gratuit",
-    "participants_limit": 50
+    "participants_limit": 200
+  },
+  {
+    "id": "event-004",
+    "title": "Marché Bio & Local",
+    "genre": "Marché",
+    "cover": "https://images.unsplash.com/photo-1488459716781-6918f33427d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
+    "date": "2025-12-07",
+    "time": "09:00 - 14:00",
+    "location": {
+      "name": "Esplanade de la Comédie",
+      "city": "Montpellier",
+      "address": "Esplanade de la Comédie, 34000 Montpellier"
+    },
+    "organizer": "Producteurs Locaux Montpellier",
+    "description": "Marché hebdomadaire bio avec producteurs locaux, fruits, légumes et produits artisanaux.",
+    "tags": ["Bio", "Local", "Marché"],
+    "price": "Gratuit",
+    "participants_limit": 500
+  },
+  {
+    "id": "event-005",
+    "title": "Yoga en Plein Air",
+    "genre": "Bien-être",
+    "cover": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
+    "date": "2025-12-14",
+    "time": "07:00 - 08:30",
+    "location": {
+      "name": "Jardin des Plantes",
+      "city": "Montpellier",
+      "address": "4 Rue Auguste Broussonnet, 34000 Montpellier"
+    },
+    "organizer": "Santé & Nature",
+    "description": "Séance de yoga matinale en plein air pour débuter votre journée zen et énergisée.",
+    "tags": ["Bien-être", "Yoga", "Nature"],
+    "price": "7€",
+    "participants_limit": 25
+  },
+  {
+    "id": "event-006",
+    "title": "Film Documentaire : Notre Planète",
+    "genre": "Cinéma",
+    "cover": "https://images.unsplash.com/photo-1485095329183-d0797cdc5676?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
+    "date": "2025-12-21",
+    "time": "20:30 - 22:00",
+    "location": {
+      "name": "Cinéma Diagonal",
+      "city": "Montpellier",
+      "address": "20 Rue Nationale, 34000 Montpellier"
+    },
+    "organizer": "Cinéphiles Engagés",
+    "description": "Projection du documentaire primé suivi d'un débat avec le réalisateur.",
+    "tags": ["Cinéma", "Environnement", "Documentaire"],
+    "price": "9€",
+    "participants_limit": 150
   }
 ]

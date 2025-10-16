@@ -1,13 +1,15 @@
 .section-events {
-  min-height: 92vh;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
   padding: 20px 20px;
+  overflow: hidden;
 
   &__header {
     text-align: left;
     max-width: 800px;
+    flex-shrink: 0;
   }
 
   &__title {
@@ -21,4 +23,10 @@
     color: #555;
     line-height: 1.6;
   }
+}
+
+// Le carousel prend le reste de l'espace
+.section-events > :last-child {
+  flex: 1;
+  overflow: hidden;
 }
