@@ -1,8 +1,8 @@
-import NavBar from "@/components/NavBar"
-import SectionEvents from "@/components/sections/Events"
-import SectionAbout from "@/components/sections/About"
+import NavBar from "@/Components/NavBar";
+import SectionEvents from "@/Components/sections/Events";
+import SectionAbout from "@/Components/sections/About";
 // import SectionTips&Advices
-// import SectionGallery
+import SectionGallery from "@/Components/sections/Gallery";
 // import SectionSupportsUs
 // import SectionContact
 
@@ -15,6 +15,8 @@ export default function HomePage() {
       <SectionEvents />
       {/* Section About */}
       <SectionAbout />
+            {/* Section Gallery */}
+      <SectionGallery />
     </main>
   );
 }

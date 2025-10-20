@@ -1,4 +1,3 @@
-// import EventsCards from "@/Components/assets/EventsCards";
 import EventsCarousel from "@/Components/assets/Carousel/EventsCarousel";
 
 import "./Events.scss";
@@ -16,7 +15,6 @@ export default function SectionEvents() {
           futur.
         </p>
       </div>
-      {/* <EventsCards /> */}
       <EventsCarousel />
     </section>
   );
