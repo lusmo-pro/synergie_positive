@@ -1,3 +1,5 @@
+import TeamGallery from "@/Components/assets/TeamGallery/TeamGallery";
+
 import "./About.scss";
 
 export default function SectionAbout() {
@@ -14,6 +16,7 @@ export default function SectionAbout() {
           laissez-vous inspirer par notre vision.
         </p>
       </div>
+      <TeamGallery />
     </section>
   );
 }
