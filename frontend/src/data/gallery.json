@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe",
+    "title": "Soirée Débat",
+    "description": "Un moment d'échange et de réflexion collective autour des enjeux sociétaux actuels."
+  },
+  {
+    "id": 2,
+    "url": "https://images.unsplash.com/photo-1497493292307-31c376b6e479",
+    "title": "Repas Solidaire",
+    "description": "Un repas partagé entre bénévoles et habitants pour renforcer le lien social."
+  },
+  {
+    "id": 3,
+    "url": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+    "title": "Atelier Collaboratif",
+    "description": "Des membres de l’association travaillent ensemble sur un nouveau projet local."
+  },
+  {
+    "id": 4,
+    "url": "https://images.unsplash.com/photo-1515165562835-c3b8e6c7d1f4",
+    "title": "Conférence Citoyenne",
+    "description": "Un intervenant partage ses idées sur la solidarité et la participation citoyenne."
+  },
+  {
+    "id": 5,
+    "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    "title": "Rencontre Intergénérationnelle",
+    "description": "Jeunes et aînés échangent sur leurs expériences et visions du monde."
+  },
+  {
+    "id": 6,
+    "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "title": "Événement Culturel",
+    "description": "Un concert et une exposition pour célébrer la diversité et la créativité locale."
+  },
+  {
+    "id": 7,
+    "url": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c",
+    "title": "Action Écologique",
+    "description": "Une journée de nettoyage collectif pour sensibiliser à la protection de l’environnement."
+  },
+  {
+    "id": 8,
+    "url": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e",
+    "title": "Atelier Artistique",
+    "description": "Les membres créent des œuvres collaboratives autour du thème de la solidarité."
+  },
+  {
+    "id": 9,
+    "url": "https://images.unsplash.com/photo-1499914485622-a88fac536970",
+    "title": "Réunion d’Équipe",
+    "description": "L’équipe de l’association échange sur les prochains projets à venir."
+  }
+]

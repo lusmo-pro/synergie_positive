@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import events from "@/data/events.json";
 import tagColors from "@/data/TagsColors";
-import "@/Components/assets/Carousel/EventsCards.scss";
 import "@/Components/assets/Carousel/EventsCarousel.scss";
 import "./EventsCarouselDropdown.scss";
 
