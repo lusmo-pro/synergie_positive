@@ -1,15 +1,14 @@
-import "./globals.css";
+import './globals.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-// export const metadata = {
-//   title: "Mon association",
-//   description: "Site officiel de l’association",
-// };
+export const metadata = {
+  title: 'Synergie Positive',
+  description: 'Site officiel de l’association Synergie Positive',
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
       <head />
