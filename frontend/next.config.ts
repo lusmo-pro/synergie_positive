@@ -1,9 +1,9 @@
 import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/synergie_positive",
-  trailingSlash: true,
+  basePath: "/synergie_positive",  // si tu veux garder le repo comme base
+  trailingSlash: true,             // optionnelle sur Vercel
+  transpilePackages: ["swiper"],   // pour que Swiper fonctionne correctement
 };
 
 export default nextConfig;
