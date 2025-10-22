@@ -1,37 +1,59 @@
 "use client";
 
-import "@/Components/assets/ImagesGallery/ImagesGallery.scss";
+import { useState } from "react";
 import gallery from "@/data/gallery.json";
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import "@/Components/assets/ImagesGallery/ImagesGallery.scss";
 import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-import { Grid, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
 
-export default function GalleryImages() {
+export default function GalleryLightbox() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const prevImage = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex(selectedIndex === 0 ? gallery.length - 1 : selectedIndex - 1);
+  };
+
+  const nextImage = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex(selectedIndex === gallery.length - 1 ? 0 : selectedIndex + 1);
+  };
+
   return (
     <div className="images-gallery">
-      <Swiper
-        slidesPerView={4}
-        grid={{
-          rows: 2,
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Grid, Pagination]}
-        className="mySwiper"
-      >
-        {gallery.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="gallery-card">
-              <img src={item.url} alt={item.title} />
+      {gallery.map((item, index) => (
+        <div key={item.id} className="gallery-card">
+          <img
+            src={item.url}
+            alt={item.title}
+            onClick={() => setSelectedIndex(index)}
+          />
+        </div>
+      ))}
+
+      {selectedIndex !== null && (
+        <div className="modal-overlay" onClick={() => setSelectedIndex(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={gallery[selectedIndex].url}
+              alt={gallery[selectedIndex].title}
+              className="modal-image"
+            />
+            <div className="modal-info">
+              <h2>{gallery[selectedIndex].title}</h2>
+              <p>{gallery[selectedIndex].description}</p>
+              {/* <small>{gallery[selectedIndex].date}</small> */}
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+            {/* Flèches Swiper style */}
+            <button className="swiper-button-prev" onClick={prevImage} />
+            <button className="swiper-button-next" onClick={nextImage} />
+
+            {/* Fermer */}
+            <button className="modal-close" onClick={() => setSelectedIndex(null)}>✕</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
