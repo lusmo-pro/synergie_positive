@@ -4,7 +4,7 @@ import SectionAbout from "@/Components/sections/About";
 // import SectionTips&Advices
 import SectionGallery from "@/Components/sections/Gallery";
 // import SectionSupportsUs
-// import SectionContact
+import SectionContact from "@/Components/sections/Contact"
 
 export default function HomePage() {
   return (
@@ -15,8 +15,10 @@ export default function HomePage() {
       <SectionEvents />
       {/* Section About */}
       <SectionAbout />
-            {/* Section Gallery */}
+      {/* Section Gallery */}
       <SectionGallery />
+      {/* Section Contact */}
+      <SectionContact />
     </main>
   );
 }
