@@ -1,16 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import gallery from "@/data/gallery.json";
 import "@/Components/assets/ImagesGallery/ImagesGallery.scss";
+import "swiper/css";
+import "swiper/css/navigation";
 
-export default function GalleryImages() {
+export default function GalleryLightbox() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const prevImage = () => {
@@ -25,29 +21,16 @@ export default function GalleryImages() {
 
   return (
     <div className="images-gallery">
-      {/* --- Swiper principal --- */}
-      <Swiper
-        slidesPerView={4}
-        grid={{ rows: 2 }}
-        spaceBetween={30}
-        pagination={{ clickable: true }}
-        modules={[Grid, Pagination]}
-        className="mySwiper"
-      >
-        {gallery.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            <div className="gallery-card">
-              <img
-                src={item.url}
-                alt={item.title}
-                onClick={() => setSelectedIndex(index)} // ouvre la lightbox
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {gallery.map((item, index) => (
+        <div key={item.id} className="gallery-card">
+          <img
+            src={item.url}
+            alt={item.title}
+            onClick={() => setSelectedIndex(index)}
+          />
+        </div>
+      ))}
 
-      {/* --- Lightbox / Modal --- */}
       {selectedIndex !== null && (
         <div className="modal-overlay" onClick={() => setSelectedIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -62,7 +45,7 @@ export default function GalleryImages() {
               {/* <small>{gallery[selectedIndex].date}</small> */}
             </div>
 
-            {/* Flèches style Swiper */}
+            {/* Flèches Swiper style */}
             <button className="swiper-button-prev" onClick={prevImage} />
             <button className="swiper-button-next" onClick={nextImage} />
 
