@@ -1,5 +1,7 @@
 // import TeamGallery from "@/Components/assets/TeamGallery/TeamGallery";
 
+import contact from "@/data/contact.json"
+
 import "./Contact.scss";
 
 export default function SectionContact() {
@@ -17,6 +19,13 @@ export default function SectionContact() {
           communauté solidaire.
         </p>
       </div>
+
+          <div className="contact-section">
+      <h2>Contactez-nous</h2>
+      <p>📍 {contact.address.street}, {contact.address.postalCode} {contact.address.city}</p>
+      <p>📞 {contact.phone}</p>
+      <p>📧 <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+    </div>
     </section>
   );
 }

@@ -37,11 +37,17 @@
     }
 
     &:hover {
-      color: #000000; // tu peux changer la couleur au hover
+      color: #000000;
     }
 
     &:hover::after {
       width: 100%;
     }
   }
+}
+
+@media (max-width: 376px) {
+  .navbar {
+  display: none;
+ }
 }

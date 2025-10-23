@@ -1,9 +1,22 @@
-import EventsCarousel from "@/Components/assets/Carousel/EventsCarousel";
+"use client";
 
-import "./Events.scss";
+import { useState } from "react";
+import Dropdown from "@/Components/assets/Carousel/Dropdown";
+import EventsCarousel from "@/Components/assets/Carousel/EventsCarousel";
+import events from "@/data/events.json";
+import "./Events.scss"
 
 export default function SectionEvents() {
-  return (
+  const [selectedGenre, setSelectedGenre] = useState<string>("Tous");
+
+   const genres = Array.from(new Set(events.map((e) => e.genre)));
+   
+    const filteredEvents =
+    selectedGenre === "Tous"
+      ? events
+      : events.filter((event) => event.genre === selectedGenre);
+
+   return (
     <section id="Events" className="section-events">
       <div className="section-events__header">
         <h2 className="section-events__title">Nos Événements</h2>
@@ -15,7 +28,13 @@ export default function SectionEvents() {
           futur.
         </p>
       </div>
-      <EventsCarousel />
+       {/* Dropdown pour filtrer */}
+      <Dropdown
+        options={genres}
+        selected={selectedGenre}
+        onSelect={setSelectedGenre}
+      />
+      <EventsCarousel events={filteredEvents} />
     </section>
   );
 }
