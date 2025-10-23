@@ -1,89 +1,32 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import events from "@/data/events.json";
 import tagColors from "@/data/TagsColors";
 import "@/Components/assets/Carousel/EventsCarousel.scss";
-import "./EventsCarouselDropdown.scss";
 
-export default function EventsCarousel() {
-  const [selectedGenre, setSelectedGenre] = useState<string>("Tous");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+interface Event {
+  id: string;
+  title: string;
+  cover: string;
+  genre: string;
+  date: string;
+  time: string;
+  location: {
+    city: string;
+  };
+}
 
-  const genres = Array.from(new Set(events.map((e) => e.genre)));
+interface EventsCarouselProps {
+  events: Event[]; // reçoit déjà les events filtrés
+}
 
-  const filteredEvents =
-    selectedGenre === "Tous"
-      ? events
-      : events.filter((event) => event.genre === selectedGenre);
-
-  // 🔹 Fermer dropdown si clic à l'extérieur
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
+export default function EventsCarousel({ events }: EventsCarouselProps) {
   return (
     <div className="events-carousel-container">
-      {/* --- Dropdown de genres --- */}
-      <div className="events-dropdown" ref={dropdownRef}>
-        <div
-          className="events-dropdown__button"
-          onClick={() => setDropdownOpen(!dropdownOpen)}
-        >
-          {selectedGenre}
-        </div>
-        <div
-          className={`events-dropdown__list ${
-            dropdownOpen ? "active" : ""
-          }`}
-        >
-          <div
-            className="events-dropdown__item"
-            onClick={() => {
-              setSelectedGenre("Tous");
-              setDropdownOpen(false);
-            }}
-          >
-            <span className="events-dropdown__item__tag" style={{ backgroundColor: "#888" }} />
-            Tous
-          </div>
-          {genres.map((genre) => (
-            <div
-              key={genre}
-              className="events-dropdown__item"
-              onClick={() => {
-                setSelectedGenre(genre);
-                setDropdownOpen(false);
-              }}
-            >
-              <span
-                className="events-dropdown__item__tag"
-                style={{ backgroundColor: tagColors[genre.split(" ")[0]] || "#ccc" }}
-              />
-              {genre}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* --- Carrousel --- */}
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -98,7 +41,7 @@ export default function EventsCarousel() {
           1024: { slidesPerView: 1.2, spaceBetween: 20 },
         }}
       >
-        {filteredEvents.map((event) => (
+        {events.map((event) => (
           <SwiperSlide key={event.id}>
             <div className="events-gallery__card">
               <img

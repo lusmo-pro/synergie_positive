@@ -1,16 +1,14 @@
 .section-events {
-  height: calc(100vh - 70px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
-  padding: 70px 20px;
+  padding: 70px 20px 0 20px;
   overflow: hidden;
-  color: black;
 
   &__header {
     text-align: left;
     max-width: 800px;
-    flex-shrink: 0;
   }
 
   &__title {
@@ -31,4 +29,30 @@
 .section-events > :last-child {
   flex: 1;
   overflow: hidden;
+}
+
+@media (max-width: 376px) {
+  .section-events {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 0 20px;
+
+    &__header{
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__description {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.6;
+    }
+  }
 }
