@@ -222,7 +222,7 @@
 
 @media (max-width: 768px) {
   .swiper {
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 0;
   }
   .events-gallery {
     &__card {
@@ -261,9 +261,21 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 376px) {
   .swiper {
-    padding: 0.75rem;
+    height: 100%;
+    padding: 0;
+  }
+    .swiper-pagination {
+        position: relative !important;
+      bottom: auto !important;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+      display: none;
+    }
   }
   .events-gallery {
     &__image {
@@ -284,4 +296,3 @@
       gap: 0.5rem;
     }
   }
-}

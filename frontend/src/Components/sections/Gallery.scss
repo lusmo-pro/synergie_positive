@@ -1,11 +1,10 @@
 .section-gallery {
-  height: calc(100vh - 70px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
-  padding: 70px 20px;
+  padding: 70px 20px 0 20px;
   overflow: hidden;
-  color: black;
 
   &__header {
     text-align: left;
@@ -31,4 +30,10 @@
 .section-gallery > :last-child {
   flex: 1;
   overflow: hidden;
+}
+
+@media (max-width: 376px) {
+  .section-gallery {
+  padding: 0 20px;
+  }
 }
