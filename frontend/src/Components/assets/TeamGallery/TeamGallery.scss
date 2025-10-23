@@ -74,18 +74,47 @@
     }
   }
 
-  // Responsive
-  @media (max-width: 768px) {
+  // Responsive mobile
+  @media (max-width: 767px) {
     .team-card {
-      flex-direction: column !important;
+      flex-direction: column !important; // ✅ carte verticale
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      gap: 1rem;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      border-radius: 20px !important;
+      overflow: hidden; // ✅ évite débordement de l’image
 
       img {
-        margin-bottom: 1rem;
+        width: 100%;
+        height: 250px; // ✅ image plus grande (avant 150px)
+        border-radius: 0; // image rectangulaire plein cadre
+        object-fit: cover;
       }
 
       .team-card__content {
         text-align: center !important;
+        padding: 1rem 1.5rem;
+
+        .name {
+          font-size: 1.1rem !important;
+          margin-bottom: 0.4rem;
+        }
+
+        .role {
+          font-size: 0.85rem;
+          font-style: oblique;
+          font-weight: 600;
+          margin-bottom: 0.6rem;
+        }
+
+        .description {
+          font-size: 0.9rem;
+          color: #333;
+        }
       }
     }
   }
