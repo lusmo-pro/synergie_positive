@@ -3,13 +3,18 @@
 import { useState } from "react";
 import Dropdown from "@/Components/assets/Carousel/Dropdown";
 import EventsCarousel from "@/Components/assets/Carousel/EventsCarousel";
-import events from "@/data/events.json";
+import { Event } from "@/app/lib/googleSheets";
 import "./Section.scss";
 
-export default function SectionEvents() {
+interface SectionEventsProps {
+  events: Event[];
+}
+
+export default function SectionEvents({ events }: SectionEventsProps) {
   const [selectedGenre, setSelectedGenre] = useState<string>("Tous");
 
   const genres = Array.from(new Set(events.map((e) => e.genre)));
+  genres.unshift("Tous"); // ajouter option Tous
 
   const filteredEvents =
     selectedGenre === "Tous"
@@ -28,7 +33,6 @@ export default function SectionEvents() {
           futur.
         </p>
       </div>
-      {/* Dropdown pour filtrer */}
       <Dropdown
         options={genres}
         selected={selectedGenre}
